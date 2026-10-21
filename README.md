@@ -54,3 +54,39 @@
 
 # Ajayraje Patil
 
+\## Project Workflow
+
+
+
+Developer → GitHub → GitHub Actions → Docker Build
+
+
+
+\## Architecture
+
+
+
+\- Source Code: GitHub repository
+
+\- CI/CD Automation: GitHub Actions
+
+\- Containerization: Docker
+
+\- Web Server: Nginx
+
+\- Website Hosting: GitHub Pages
+
+\- Local Container URL: http://localhost:8080
+
+
+
+\## Future Improvements
+
+
+
+\- Deploy the container to AWS
+
+\- Add automated tests
+
+\- Learn AWS networking and IAM
+
