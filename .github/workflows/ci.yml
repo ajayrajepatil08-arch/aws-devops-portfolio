@@ -19,3 +19,6 @@ jobs:
           test -f index.html
           test -f Dockerfile
           echo "Portfolio files checked successfully!"
+
+      - name: Build Docker image
+        run: docker build -t my-portfolio .
