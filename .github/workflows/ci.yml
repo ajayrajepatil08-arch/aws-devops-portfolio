@@ -1,3 +1,4 @@
+
 name: Portfolio CI
 
 on:
@@ -7,18 +8,21 @@ on:
     branches: [main]
 
 jobs:
-  check:
+  test-and-build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get project code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check project files
+      - name: Test website file
         run: |
           test -f index.html
-          test -f Dockerfile
-          echo "Portfolio files checked successfully!"
+          grep -qi "<html" index.html
+          echo "Website HTML test passed!"
+
+      - name: Test Dockerfile
+        run: test -f Dockerfile
 
       - name: Build Docker image
         run: docker build -t my-portfolio .
